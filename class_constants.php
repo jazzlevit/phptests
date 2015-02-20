@@ -2,8 +2,8 @@
 
 class One
 {
-	protected const ONE = '10';
-	protected const TWO = '20';
+	const ONE = '10';
+	const TWO = '20';
 	
 	public function __construct(){
 		$this->getStack();
@@ -14,11 +14,19 @@ class One
 		self::TWO => "second",
 	];
 	
+	static public function testStatic(){
+		return 'test well';
+	}
+	
 	public function getStack()
 	{
-		return self::STACK;
+		var_dump(self::STACK);
 	}
 	
 }
 
 $obj = new One();
+
+var_dump($obj::STACK);
+echo $obj->testStatic() . "<br>";
+echo $obj::testStatic() . "<br>";
