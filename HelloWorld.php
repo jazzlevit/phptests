@@ -1,6 +1,12 @@
 <?php
-class HiWorld
+
+class HelloWorld
 {
+    public function One()
+    {
+        echo 'One';
+    }
+
     public function Two()
     {
         echo 'Two';
